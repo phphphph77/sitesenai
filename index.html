@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI - Contato</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* TOPO */
+    .topo {
+      background-color: #1e3d9f;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topo .logo {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .topo .menu {
+      font-size: 16px;
+    }
+
+    .topo .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* CONTEÚDO */
+    .conteudo {
+      padding: 20px;
+      display: none;
+    }
+
+    /* Página de Contato */
+    .formulario {
+      background-color: #42e3ff;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .formulario h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: black;
+    }
+
+    .formulario label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .formulario input,
+    .formulario textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .formulario button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1e3d9f;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    /* Página Sobre */
+    .sobre {
+      background-color: #f0f0f0;
+      padding: 40px;
+    }
+
+    .sobre h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .sobre p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .sobre h3 {
+      font-size: 22px;
+      margin-top: 20px;
+      color: #1e3d9f;
+    }
+
+    .sobre ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sobre ul li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Página Cursos */
+    .cursos {
+      background-color: #f7f7f7;
+      padding: 40px;
+    }
+
+    .cursos h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .cursos ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .cursos li {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Mostrar/Esconder Páginas */
+    .ativo {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPO -->
+<div class="topo">
+  <div class="logo">SENAI</div>
+  <div class="menu">
+    <a href="#" onclick="mostrarPagina('contato')">CONTATO</a>
+    <a href="#" onclick="mostrarPagina('sobre')">SOBRE</a>
+    <a href="#" onclick="mostrarPagina('cursos')">CURSOS</a>
+  </div>
+</div>
+
+<!-- Páginas -->
+<div id="contato" class="conteudo ativo">
+  <div class="formulario">
+    <h2>Contate-nos</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email">
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+      <button type="submit">ENVIAR</button>
+      <a href="#">Esqueceu a senha?</a>
+    </form>
+  </div>
+</div>
+
+<div id="sobre" class="conteudo">
+  <div class="sobre">
+    <h2>Sobre o SENAI</h2>
+    <p>O <strong>SENAI</strong> (Serviço Nacional de Aprendizagem Industrial) é uma instituição de ensino e treinamento profissional criada em 1942, com a missão de promover a educação profissional de qualidade para o desenvolvimento da indústria brasileira. Através de cursos técnicos, de qualificação e formação inicial e continuada, o SENAI tem como objetivo capacitar profissionais para o mercado de trabalho, contribuindo com o crescimento econômico e social do Brasil.</p>
+
+    <h3>Missão</h3>
+    <p>Desenvolver e promover a educação profissional, preparando os trabalhadores para os desafios da indústria moderna e impulsionando o desenvolvimento econômico e social do Brasil.</p>
+
+    <h3>Visão</h3>
+    <p>Ser reconhecido como referência nacional e internacional na qualificação profissional e na inovação tecnológica, atendendo às necessidades da indústria e gerando impacto positivo na sociedade.</p>
+
+    <h3>Valores</h3>
+    <ul>
+      <li><strong>Excelência:</strong> Buscar a qualidade e a melhoria contínua em todas as suas ações.</li>
+      <li><strong>Inovação:</strong> Incentivar a criatividade, a adaptação às novas tecnologias e as mudanças constantes do mercado.</li>
+      <li><strong>Compromisso:</strong> Dedicação ao desenvolvimento do trabalhador e da indústria.</li>
+      <li><strong>Ética:</strong> Respeitar os princípios de transparência e honestidade em todas as relações.</li>
+    </ul>
+
+    <h3>História</h3>
+    <p>O SENAI foi fundado em 1942 com o objetivo de promover a formação de mão-de-obra especializada para a indústria brasileira, em um momento crucial de crescimento do setor industrial. Desde sua criação, a instituição tem se dedicado a oferecer educação de qualidade e a atender as necessidades do mercado de trabalho com foco na inovação e na capacitação profissional.</p>
+
+    <h3>Áreas de Atuação</h3>
+    <p>O SENAI oferece uma ampla gama de cursos em diversas áreas, como:</p>
+    <ul>
+      <li>Automação e Mecatrônica</li>
+      <li>Tecnologia da Informação</li>
+      <li>Eletroeletrônica</li>
+      <li>Química</li>
+      <li>Construção Civil</li>
+      <li>Logística</li>
+      <li>Design e Moda</li>
+      <li>Saúde e Segurança do Trabalho</li>
+      <li>Entre outros</li>
+    </ul>
+    <p>Além disso, o SENAI está sempre à frente no desenvolvimento de novas soluções tecnológicas, oferecendo aos seus alunos a melhor formação para um mercado de trabalho cada vez mais competitivo.</p>
+  </div>
+</div>
+
+<div id="cursos" class="conteudo">
+  <div class="cursos">
+    <h2>Cursos Oferecidos</h2>
+    <ul>
+      <li>Técnico em Mecânica</li>
+      <li>Técnico em Informática</li>
+      <li>Técnico em Eletroeletrônica</li>
+      <li>Qualificação Profissional - Eletricista</li>
+      <li>Curso de Desenvolvimento Web</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  // Função para mostrar as páginas
+  function mostrarPagina(pagina) {
+    // Esconde todas as páginas
+    const paginas = document.querySelectorAll('.conteudo');
+    paginas.forEach(pagina => {
+      pagina.classList.remove('ativo');
+    });
+    
+    // Mostra a página selecionada
+    document.getElementById(pagina).classList.add('ativo');
+  }
+</script>
+
+</body>
+</html>
