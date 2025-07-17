@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SENAI - Contato</title>
+
+  <!-- Fonte Roboto do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', Arial, sans-serif;
       background-color: #ffffff;
     }
 
@@ -34,6 +38,7 @@
       color: white;
       text-decoration: none;
       margin-left: 20px;
+      cursor: pointer;
     }
 
     /* CONTEÚDO */
@@ -42,50 +47,8 @@
       display: none;
     }
 
-    /* Página de Contato */
-    .formulario {
-      background-color: #42e3ff;
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      border-radius: 5px;
-    }
-
-    .formulario h2 {
-      margin-bottom: 20px;
-      font-size: 20px;
-      color: black;
-    }
-
-    .formulario label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: black;
-    }
-
-    .formulario input,
-    .formulario textarea {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 3px;
-    }
-
-    .formulario button {
-      width: 100%;
-      padding: 10px;
-      background-color: #1e3d9f;
-      color: white;
-      border: none;
-      font-size: 16px;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    /* Página Sobre */
-    .sobre {
+    /* Página SOBRE */
+    #sobre {
       background-color: #f0f0f0;
       padding: 40px;
     }
@@ -103,7 +66,7 @@
     .sobre h3 {
       font-size: 22px;
       margin-top: 20px;
-      color: #1e3d9f;
+      color: #000000f3;
     }
 
     .sobre ul {
@@ -116,8 +79,8 @@
       margin-bottom: 10px;
     }
 
-    /* Página Cursos */
-    .cursos {
+    /* Página CURSOS */
+    #cursos {
       background-color: #f7f7f7;
       padding: 40px;
     }
@@ -137,9 +100,102 @@
       margin-bottom: 10px;
     }
 
-    /* Mostrar/Esconder Páginas */
+    /* Página CONTATO com fundo imagem */
+    #contato {
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 60px 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    /* Mostrar página ativa */
     .ativo {
       display: block;
+    }
+
+    /* Formulário com fundo escuro semitransparente */
+    .formulario {
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 400px;
+      margin: 0 auto 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    .formulario h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .formulario label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .formulario input,
+    .formulario textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    .formulario button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1e3d9f;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    /* Informações de contato extras */
+    #contato section {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    #contato section h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    #contato section p {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    #contato section img {
+      margin-right: 10px;
+    }
+
+    /* Rodapé */
+    footer.rodape {
+      text-align: center;
+      padding: 10px;
+      background-color: #1e3d9f;
+      color: white;
+      margin-top: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -149,30 +205,14 @@
 <div class="topo">
   <div class="logo">SENAI</div>
   <div class="menu">
-    <a href="#" onclick="mostrarPagina('contato')">CONTATO</a>
-    <a href="#" onclick="mostrarPagina('sobre')">SOBRE</a>
-    <a href="#" onclick="mostrarPagina('cursos')">CURSOS</a>
+    <a onclick="mostrarPagina('sobre')">SOBRE</a>
+    <a onclick="mostrarPagina('cursos')">CURSOS</a>
+    <a onclick="mostrarPagina('contato')">CONTATO</a>
   </div>
 </div>
 
 <!-- Páginas -->
-<div id="contato" class="conteudo ativo">
-  <div class="formulario">
-    <h2>Contate-nos</h2>
-    <form>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome">
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email">
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
-      <button type="submit">ENVIAR</button>
-      <a href="#">Esqueceu a senha?</a>
-    </form>
-  </div>
-</div>
-
-<div id="sobre" class="conteudo">
+<div id="sobre" class="conteudo ativo">
   <div class="sobre">
     <h2>Sobre o SENAI</h2>
     <p>O <strong>SENAI</strong> (Serviço Nacional de Aprendizagem Industrial) é uma instituição de ensino e treinamento profissional criada em 1942, com a missão de promover a educação profissional de qualidade para o desenvolvimento da indústria brasileira. Através de cursos técnicos, de qualificação e formação inicial e continuada, o SENAI tem como objetivo capacitar profissionais para o mercado de trabalho, contribuindo com o crescimento econômico e social do Brasil.</p>
@@ -224,15 +264,41 @@
   </div>
 </div>
 
+<div id="contato" class="conteudo">
+  <div class="formulario">
+    <h2>Contate-nos!</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" />
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" />
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+      <button type="submit">ENVIAR</button>
+    </form>
+  </div>
+
+  <section>
+    <h2>Contato</h2>
+    <p><img src="Imagens/pin.png" height="15" width="15" alt="Endereço"> Unidade SENAI Central - Rua da Indústria, 123, Centro</p>
+    <p><img src="Imagens/telefone.webp" height="15" width="15" alt="Telefone"> (11) 4002-8922</p>
+    <p><img src="Imagens/email.webp" height="15" width="15" alt="Email"> atendimento@senai.br.com</p>
+  </section>
+</div>
+
+<footer class="rodape">
+  © 2025 SENAI - Serviço Nacional de Aprendizagem Industrial
+</footer>
+
 <script>
   // Função para mostrar as páginas
   function mostrarPagina(pagina) {
     // Esconde todas as páginas
     const paginas = document.querySelectorAll('.conteudo');
-    paginas.forEach(pagina => {
-      pagina.classList.remove('ativo');
+    paginas.forEach(p => {
+      p.classList.remove('ativo');
     });
-    
+
     // Mostra a página selecionada
     document.getElementById(pagina).classList.add('ativo');
   }
